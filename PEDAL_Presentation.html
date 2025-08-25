@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEDAL - The Ultimate Social Platform for Riders</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1F1F1F 0%, #2A2A2A 100%);
+            color: #FFFFFF;
+        }
+        
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            padding: 60px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            page-break-after: always;
+            position: relative;
+        }
+        
+        .slide h1 {
+            color: #FF6B00;
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .slide h2 {
+            color: #FF6B00;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .slide h3 {
+            color: #FF6B00;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .slide p, .slide li {
+            font-size: 1.3em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .slide ul {
+            padding-left: 30px;
+        }
+        
+        .slide li {
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 1.5em;
+            color: #E0E0E0;
+            margin-top: 20px;
+        }
+        
+        .highlight {
+            background: linear-gradient(90deg, #FF6B00, #FF8533);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .feature-box {
+            background: rgba(255, 107, 0, 0.1);
+            border: 2px solid #FF6B00;
+            border-radius: 15px;
+            padding: 25px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            font-size: 1.1em;
+        }
+        
+        .comparison-table th {
+            background: #FF6B00;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .comparison-table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #444;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: rgba(255, 107, 0, 0.05);
+        }
+        
+        .slide-number {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            color: #A0A0A0;
+            font-size: 1em;
+        }
+        
+        @media print {
+            .slide {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Slide 1: Title Slide -->
+<div class="slide">
+    <h1>PEDAL</h1>
+    <p class="subtitle"><em>Connect. Ride. Share.</em></p>
+    <p class="subtitle">The Revolutionary Social Platform for Cyclists & Motorcyclists</p>
+    <div class="slide-number">1</div>
+</div>
+
+<!-- Slide 2: Executive Summary -->
+<div class="slide">
+    <h2>Executive Summary</h2>
+    <h3>The Next Generation Rider Community Platform</h3>
+    <ul>
+        <li><span class="highlight">Modern Social Media Experience</span> - Reddit/Twitter-inspired interface with dark theme</li>
+        <li><span class="highlight">Comprehensive Offline Capabilities</span> - Works without internet connection</li>
+        <li><span class="highlight">Advanced Navigation & Maps</span> - Real-time GPS with offline map downloads</li>
+        <li><span class="highlight">Emergency Safety Features</span> - SOS system with satellite communication</li>
+        <li><span class="highlight">Marketplace Integration</span> - Buy/sell parts and accessories</li>
+        <li><span class="highlight">Event Management</span> - Create and join riding events with verification</li>
+    </ul>
+    <div class="slide-number">2</div>
+</div>
+
+<!-- Slide 3: Market Opportunity -->
+<div class="slide">
+    <h2>Market Opportunity</h2>
+    <h3>The Riding Community Needs a Dedicated Platform</h3>
+    
+    <div class="feature-grid">
+        <div class="feature-box">
+            <h3>Market Size</h3>
+            <ul>
+                <li>100M+ cyclists worldwide</li>
+                <li>200M+ motorcyclists globally</li>
+                <li>Growing adventure tourism market ($600B+)</li>
+            </ul>
+        </div>
+        <div class="feature-box">
+            <h3>Current Pain Points</h3>
+            <ul>
+                <li>Fragmented communities across multiple platforms</li>
+                <li>No offline functionality for remote areas</li>
+                <li>Limited safety features for solo riders</li>
+                <li>Poor integration of social + navigation + marketplace</li>
+            </ul>
+        </div>
+    </div>
+    <div class="slide-number">3</div>
+</div>
+
+<!-- Slide 4: Core Features Overview -->
+<div class="slide">
+    <h2>Core Features Overview</h2>
+    <h3>8 Integrated Modules in One Platform</h3>
+    <ul>
+        <li><strong>Social Feed</strong> - Posts, comments, media sharing</li>
+        <li><strong>Maps & Navigation</strong> - Offline maps, route planning, live tracking</li>
+        <li><strong>Marketplace</strong> - Parts, accessories, bike sales</li>
+        <li><strong>Events</strong> - Group rides, meetups, verification system</li>
+        <li><strong>Offline Mode</strong> - Bluetooth mesh, WiFi Direct communication</li>
+        <li><strong>Emergency SOS</strong> - Satellite-based emergency services</li>
+        <li><strong>Profile & Community</strong> - Badges, achievements, garage showcase</li>
+        <li><strong>Messages</strong> - Real-time chat with riders</li>
+    </ul>
+    <div class="slide-number">4</div>
+</div>
+
+<!-- Slide 5: Unique Feature #1 - Offline Capabilities -->
+<div class="slide">
+    <h2>Unique Feature #1</h2>
+    <h3>Revolutionary Offline Functionality</h3>
+    
+    <div class="feature-grid">
+        <div class="feature-box">
+            <h3>Bluetooth Mesh Network (50m range)</h3>
+            <ul>
+                <li>Device-to-device messaging</li>
+                <li>Real-time communication without internet</li>
+                <li>Peer tracking for group rides</li>
+            </ul>
+        </div>
+        <div class="feature-box">
+            <h3>WiFi Direct (200m range)</h3>
+            <ul>
+                <li>Voice calling capabilities</li>
+                <li>Extended range communication</li>
+                <li>File sharing (photos, routes)</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="feature-box" style="margin-top: 30px;">
+        <h3>Offline Maps</h3>
+        <ul>
+            <li>Download maps for any region</li>
+            <li>Works completely offline</li>
+            <li>Navigation without data connection</li>
+        </ul>
+    </div>
+    
+    <p style="text-align: center; font-size: 1.5em; color: #FF6B00; margin-top: 30px;">
+        <strong>No Competitor Offers This Level of Offline Integration</strong>
+    </p>
+    <div class="slide-number">5</div>
+</div>
+
+<!-- Slide 6: Unique Feature #2 - Emergency Safety System -->
+<div class="slide">
+    <h2>Unique Feature #2</h2>
+    <h3>Comprehensive Emergency Support</h3>
+    
+    <div class="feature-grid">
+        <div class="feature-box">
+            <h3>SOS Emergency Features</h3>
+            <ul>
+                <li>Works without cellular signal</li>
+                <li>GPS coordinate sharing</li>
+                <li>Automatic emergency service detection</li>
+                <li>Distance-based response time calculation</li>
+            </ul>
+        </div>
+        <div class="feature-box">
+            <h3>Emergency Services Integration</h3>
+            <ul>
+                <li>Police (100), Fire (101), Hospital (102), Ambulance (108)</li>
+                <li>Satellite communication when available</li>
+                <li>Pre-configured emergency contacts</li>
+                <li>Crash detection with automatic alerts</li>
+            </ul>
+        </div>
+    </div>
+    
+    <p style="text-align: center; font-size: 1.5em; color: #FF6B00; margin-top: 30px;">
+        <strong>Competitors like Strava and Tonit lack comprehensive emergency features</strong>
+    </p>
+    <div class="slide-number">6</div>
+</div>
+
+<!-- Slide 7: Unique Feature #3 - Integrated Marketplace -->
+<div class="slide">
+    <h2>Unique Feature #3</h2>
+    <h3>Built-in Commerce Platform</h3>
+    
+    <div class="feature-grid">
+        <div class="feature-box">
+            <h3>Seamless Shopping Experience</h3>
+            <ul>
+                <li>Parts and accessories marketplace</li>
+                <li>Direct seller communication</li>
+                <li>Integrated with social profiles</li>
+                <li>Location-based listings</li>
+            </ul>
+        </div>
+        <div class="feature-box">
+            <h3>Advanced Features</h3>
+            <ul>
+                <li>Product reviews and ratings</li>
+                <li>Price comparison tools</li>
+                <li>Wishlist and saved items</li>
+                <li>Secure payment integration</li>
+            </ul>
+        </div>
+    </div>
+    
+    <p style="text-align: center; font-size: 1.5em; color: #FF6B00; margin-top: 30px;">
+        <strong>Unlike Strava or ESR, PEDAL combines social networking with commerce</strong>
+    </p>
+    <div class="slide-number">7</div>
+</div>
+
+<!-- Slide 8: Unique Feature #4 - Event Verification System -->
+<div class="slide">
+    <h2>Unique Feature #4</h2>
+    <h3>Professional Event Management</h3>
+    
+    <div class="feature-grid">
+        <div class="feature-box">
+            <h3>Smart Verification Process</h3>
+            <ul>
+                <li>Custom verification questions for events</li>
+                <li>Organizer review and approval system</li>
+                <li>Skill-based event filtering</li>
+                <li>Automatic attendee management</li>
+            </ul>
+        </div>
+        <div class="feature-box">
+            <h3>Event Features</h3>
+            <ul>
+                <li>Public and private events</li>
+                <li>Location-based event discovery</li>
+                <li>RSVP tracking with status updates</li>
+                <li>Integration with maps for event routes</li>
+            </ul>
+        </div>
+    </div>
+    
+    <p style="text-align: center; font-size: 1.5em; color: #FF6B00; margin-top: 30px;">
+        <strong>No other platform offers this level of event verification and management</strong>
+    </p>
+    <div class="slide-number">8</div>
+</div>
+
+<!-- Slide 9: Modern UI/UX Design -->
+<div class="slide">
+    <h2>Modern UI/UX Design</h2>
+    <h3>Reddit/Twitter-Inspired Interface</h3>
+    
+    <div class="feature-grid">
+        <div class="feature-box">
+            <h3>Design Principles</h3>
+            <ul>
+                <li>Dark theme with orange accents (#FF6B00)</li>
+                <li>Card-based layouts for better readability</li>
+                <li>Mobile-first responsive design</li>
+                <li>Familiar social media patterns</li>
+            </ul>
+        </div>
+        <div class="feature-box">
+            <h3>User Experience</h3>
+            <ul>
+                <li>Infinite scroll feeds</li>
+                <li>Threaded comments system</li>
+                <li>Real-time notifications</li>
+                <li>Smooth animations and transitions</li>
+            </ul>
+        </div>
+    </div>
+    
+    <p style="text-align: center; font-size: 1.5em; color: #FF6B00; margin-top: 30px;">
+        <strong>Clean, modern interface that users already know how to use</strong>
+    </p>
+    <div class="slide-number">9</div>
+</div>
+
+<!-- Slide 10: Competitor Analysis -->
+<div class="slide">
+    <h2>Competitor Analysis</h2>
+    <h3>How PEDAL Stands Out</h3>
+    
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>PEDAL</th>
+                <th>Strava</th>
+                <th>Tonit</th>
+                <th>ESR</th>
+                <th>Zwift</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Offline Mode</strong></td>
+                <td>✅ Full</td>
+                <td>❌ None</td>
+                <td>❌ Limited</td>
+                <td>❌ None</td>
+                <td>❌ None</td>
+            </tr>
+            <tr>
+                <td><strong>Emergency SOS</strong></td>
+                <td>✅ Comprehensive</td>
+                <td>❌ None</td>
+                <td>❌ Basic</td>
+                <td>✅ Crash Detection</td>
+                <td>❌ None</td>
+            </tr>
+            <tr>
+                <td><strong>Marketplace</strong></td>
+                <td>✅ Integrated</td>
+                <td>❌ None</td>
+                <td>❌ None</td>
+                <td>❌ None</td>
+                <td>❌ None</td>
+            </tr>
+            <tr>
+                <td><strong>Event Verification</strong></td>
+                <td>✅ Advanced</td>
+                <td>❌ Basic</td>
+                <td>❌ Basic</td>
+                <td>❌ None</td>
+                <td>❌ None</td>
+            </tr>
+            <tr>
+                <td><strong>Social Features</strong></td>
+                <td>✅ Full</td>
+                <td>✅ Good</td>
+                <td>✅ Good</td>
+                <td>✅ Basic</td>
+                <td>✅ Limited</td>
+            </tr>
+            <tr>
+                <td><strong>Navigation</strong></td>
+                <td>✅ Advanced</td>
+                <td>❌ Basic</td>
+                <td>✅ Good</td>
+                <td>✅ Good</td>
+                <td>❌ None</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="slide-number">10</div>
+</div>
+
+<!-- Slide 11: Technical Architecture -->
+<div class="slide">
+    <h2>Technical Architecture</h2>
+    <h3>Built for Scale and Performance</h3>
+    
+    <div class="feature-grid">
+        <div class="feature-box">
+            <h3>Frontend</h3>
+            <ul>
+                <li>React with TypeScript</li>
+                <li>Framer Motion animations</li>
+                <li>Progressive Web App (PWA)</li>
+                <li>Responsive design (mobile-first)</li>
+            </ul>
+        </div>
+        <div class="feature-box">
+            <h3>Backend</h3>
+            <ul>
+                <li>Go-based API server</li>
+                <li>PostgreSQL database</li>
+                <li>Real-time WebSocket connections</li>
+                <li>Microservices architecture</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="feature-box" style="margin-top: 30px;">
+        <h3>Mobile Features</h3>
+        <ul>
+            <li>Native GPS integration</li>
+            <li>Camera and media capture</li>
+            <li>Push notifications</li>
+            <li>Offline data synchronization</li>
+        </ul>
+    </div>
+    <div class="slide-number">11</div>
+</div>
+
+<!-- Slide 12: Target Audience -->
+<div class="slide">
+    <h2>Target Audience</h2>
+    <h3>Multi-Segment User Base</h3>
+    
+    <div class="feature-grid">
+        <div class="feature-box">
+            <h3>Primary Users</h3>
+            <ul>
+                <li>Recreational cyclists (weekend riders)</li>
+                <li>Motorcycle enthusiasts (touring, sport)</li>
+                <li>Adventure riders (long-distance, off-road)</li>
+                <li>Urban commuters (daily riders)</li>
+            </ul>
+        </div>
+        <div class="feature-box">
+            <h3>Secondary Users</h3>
+            <ul>
+                <li>Bike shops and mechanics</li>
+                <li>Event organizers</li>
+                <li>Tourism companies</li>
+                <li>Safety equipment vendors</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 40px;">
+        <p><strong>Age Range:</strong> 18-55 years</p>
+        <p><strong>Tech Comfort:</strong> Medium to High</p>
+    </div>
+    <div class="slide-number">12</div>
+</div>
+
+<!-- Slide 13: Monetization Strategy -->
+<div class="slide">
+    <h2>Monetization Strategy</h2>
+    <h3>Multiple Revenue Streams</h3>
+    
+    <div class="feature-grid">
+        <div class="feature-box">
+            <h3>Subscription Tiers</h3>
+            <ul>
+                <li><strong>Free:</strong> Basic features, limited offline maps</li>
+                <li><strong>Premium ($9.99/month):</strong> Full offline access, advanced features</li>
+                <li><strong>Pro ($19.99/month):</strong> Business features, event management</li>
+            </ul>
+        </div>
+        <div class="feature-box">
+            <h3>Marketplace Revenue</h3>
+            <ul>
+                <li>3-5% transaction fees</li>
+                <li>Featured listing fees</li>
+                <li>Promoted product placements</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="feature-box" style="margin-top: 30px;">
+        <h3>Additional Revenue</h3>
+        <ul>
+            <li>Premium map downloads</li>
+            <li>Custom route planning services</li>
+            <li>Corporate partnerships with bike manufacturers</li>
+        </ul>
+    </div>
+    <div class="slide-number">13</div>
+</div>
+
+<!-- Slide 14: Why PEDAL Will Succeed -->
+<div class="slide">
+    <h2>Why PEDAL Will Succeed</h2>
+    <h3>Unique Value Proposition</h3>
+    
+    <div style="margin-top: 30px;">
+        <div class="feature-box" style="margin-bottom: 20px;">
+            <h3>1. First-Mover Advantage in Offline Social Networking</h3>
+            <ul>
+                <li>No competitor offers comprehensive offline functionality</li>
+                <li>Critical for adventure and remote area riders</li>
+            </ul>
+        </div>
+        
+        <div class="feature-box" style="margin-bottom: 20px;">
+            <h3>2. All-in-One Platform</h3>
+            <ul>
+                <li>Eliminates need for multiple apps</li>
+                <li>Seamless integration between features</li>
+            </ul>
+        </div>
+        
+        <div class="feature-box" style="margin-bottom: 20px;">
+            <h3>3. Safety-First Approach</h3>
+            <ul>
+                <li>Comprehensive emergency features</li>
+                <li>Appeals to safety-conscious riders and families</li>
+            </ul>
+        </div>
+        
+        <div class="feature-box">
+            <h3>4. Modern, Familiar Interface</h3>
+            <ul>
+                <li>Easy adoption with Reddit/Twitter-like design</li>
+                <li>Reduces learning curve for new users</li>
+            </ul>
+        </div>
+    </div>
+    <div class="slide-number">14</div>
+</div>
+
+<!-- Slide 15: Investment Highlights -->
+<div class="slide">
+    <h2>Investment Highlights</h2>
+    <h3>Why Invest in PEDAL</h3>
+    
+    <div class="feature-grid">
+        <div class="feature-box">
+            <h3>Large Addressable Market</h3>
+            <ul>
+                <li>300M+ global riders</li>
+                <li>Growing adventure tourism sector</li>
+                <li>Increasing focus on outdoor activities</li>
+            </ul>
+        </div>
+        <div class="feature-box">
+            <h3>Competitive Advantages</h3>
+            <ul>
+                <li>Unique offline capabilities</li>
+                <li>Comprehensive safety features</li>
+                <li>All-in-one platform approach</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="feature-grid" style="margin-top: 30px;">
+        <div class="feature-box">
+            <h3>Strong Technical Foundation</h3>
+            <ul>
+                <li>Modern tech stack</li>
+                <li>Scalable architecture</li>
+                <li>Mobile-first design</li>
+            </ul>
+        </div>
+        <div class="feature-box">
+            <h3>Experienced Team</h3>
+            <ul>
+                <li>Deep understanding of rider community</li>
+                <li>Proven technical execution</li>
+                <li>Clear product vision</li>
+            </ul>
+        </div>
+    </div>
+    <div class="slide-number">15</div>
+</div>
+
+<!-- Slide 16: Call to Action -->
+<div class="slide">
+    <h2>Join the PEDAL Revolution</h2>
+    
+    <div class="feature-grid">
+        <div class="feature-box">
+            <h3>For Investors</h3>
+            <ul>
+                <li>Be part of the next-generation social platform</li>
+                <li>Tap into the growing rider community market</li>
+                <li>Support innovation in outdoor recreation technology</li>
+            </ul>
+        </div>
+        <div class="feature-box">
+            <h3>For Users</h3>
+            <ul>
+                <li>Download PEDAL today</li>
+                <li>Experience the future of rider social networking</li>
+                <li>Connect with riders worldwide, even offline</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="feature-box" style="margin-top: 30px;">
+        <h3>For Partners</h3>
+        <ul>
+            <li>Integrate with our marketplace</li>
+            <li>Sponsor events and communities</li>
+            <li>Collaborate on safety initiatives</li>
+        </ul>
+    </div>
+    <div class="slide-number">16</div>
+</div>
+
+<!-- Slide 17: Contact Information -->
+<div class="slide">
+    <h2>Contact Information</h2>
+    <h3>Get in Touch</h3>
+    
+    <div style="text-align: center; margin-top: 50px;">
+        <div class="feature-box" style="display: inline-block; text-align: left; max-width: 600px;">
+            <p><strong>Website:</strong> www.pedal-app.com</p>
+            <p><strong>Email:</strong> hello@pedal-app.com</p>
+            <p><strong>Social:</strong> @PedalApp</p>
+            
+            <h3 style="margin-top: 30px;">Download:</h3>
+            <ul>
+                <li>iOS App Store</li>
+                <li>Google Play Store</li>
+                <li>Web App: app.pedal-app.com</li>
+            </ul>
+            
+            <h3 style="margin-top: 30px;">Follow our journey:</h3>
+            <ul>
+                <li>LinkedIn: /company/pedal-app</li>
+                <li>Twitter: @PedalApp</li>
+                <li>Instagram: @PedalApp</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 50px; font-size: 1.8em; color: #FF6B00;">
+        <strong>Thank you for your attention!</strong><br>
+        <em>Questions & Discussion</em>
+    </div>
+    <div class="slide-number">17</div>
+</div>
+
+<script>
+    // Add keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+            window.scrollBy(0, window.innerHeight);
+        } else if (e.key === 'ArrowLeft') {
+            window.scrollBy(0, -window.innerHeight);
+        }
+    });
+    
+    // Print styles for PDF conversion
+    window.addEventListener('beforeprint', function() {
+        document.body.style.fontSize = '12pt';
+    });
+</script>
+
+</body>
+</html>
