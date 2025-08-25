@@ -1,0 +1,30 @@
+{
+  "name": "pedal-backend",
+  "version": "1.0.0",
+  "description": "PEDAL Backend API - Go-based server for the PEDAL social platform",
+  "main": "main.go",
+  "scripts": {
+    "dev": "go run main.go",
+    "build": "go build -o bin/pedal-backend main.go",
+    "start": "go run main.go",
+    "test": "go test ./...",
+    "mod": "go mod tidy",
+    "install": "go mod download"
+  },
+  "keywords": [
+    "pedal",
+    "social",
+    "api",
+    "golang",
+    "backend"
+  ],
+  "author": "PEDAL Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "engines": {
+    "go": ">=1.19"
+  }
+}

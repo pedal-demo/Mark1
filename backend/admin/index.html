@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PEDAL Admin Dashboard</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;background:#0f1115;color:#e5e7eb;margin:0;padding:24px}
+    .card{background:#151923;border:1px solid #232a3a;border-radius:12px;padding:16px;margin-bottom:16px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .ok{color:#10b981}.down{color:#ef4444}.warn{color:#f59e0b}
+    h1{margin:0 0 16px 0}
+    code{background:#0b0f16;padding:2px 6px;border-radius:6px}
+    small{color:#9ca3af}
+    button{background:#ff6b00;border:none;color:white;padding:8px 12px;border-radius:8px;cursor:pointer}
+  </style>
+</head>
+<body>
+  <h1>PEDAL Admin Dashboard</h1>
+  <div class="grid">
+    <div class="card">
+      <h3>API Health</h3>
+      <div id="apiHealth">Loading...</div>
+      <small id="apiTime"></small>
+    </div>
+    <div class="card">
+      <h3>Services</h3>
+      <div>PostgreSQL: <span id="db" class="warn">checking...</span></div>
+      <div>Redis: <span id="redis" class="warn">checking...</span></div>
+      <div>Messages: <span id="messages">0</span></div>
+    </div>
+    <div class="card">
+      <h3>Metrics</h3>
+      <a href="/metrics" target="_blank"><button>View Prometheus Metrics</button></a>
+    </div>
+  </div>
+  <script>
+    async function refresh(){
+      try{
+        const res = await fetch('/admin/stats');
+        const data = await res.json();
+        document.getElementById('apiHealth').textContent = 'OK';
+        document.getElementById('apiHealth').className = 'ok';
+        document.getElementById('apiTime').textContent = new Date(data.time).toLocaleString();
+        document.getElementById('db').textContent = data.db; document.getElementById('db').className = data.db==='up'?'ok':(data.db==='down'?'down':'warn');
+        document.getElementById('redis').textContent = data.redis; document.getElementById('redis').className = data.redis==='up'?'ok':(data.redis==='down'?'down':'warn');
+        document.getElementById('messages').textContent = data.messages_count;
+      }catch(e){
+        document.getElementById('apiHealth').textContent = 'DOWN';
+        document.getElementById('apiHealth').className = 'down';
+      }
+    }
+    refresh(); setInterval(refresh, 5000);
+  </script>
+</body>
+</html>
